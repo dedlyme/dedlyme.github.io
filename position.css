@@ -1,14 +1,16 @@
 header{
-    background-color: rgb(0, 0, 0);
+    background-color:greenyellow;
     position: fixed;
     top:0;
     left:0;
     width:100vw;
-    z-index:100000000000000000000000000000000000000000000000000000000000;
+    z-index:10000000;
+    
 }
 ul{
     display:flex;
    justify-content: space-around;
+   
    
 }
 main{
@@ -42,4 +44,48 @@ a:hover{
     position: absolute;
     top:5px;
     right:5px;
+}
+
+.burger{
+    display: none;
+}
+.check{
+    display:none;
+}
+@media (max-width: 200px){
+    .burger{
+    display: block;
+}
+img{
+    width:50px;
+}
+ul{
+    
+    position:absolute;
+    top:100%;
+    left:0;
+    flex-direction: column;
+    background-color:greenyellow;
+    margin:0;
+    width:100vw;
+align-items: center;
+padding-left: 0;
+display: none;
+}
+li{
+    padding-bottom: 20px;
+}
+.check{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    opacity:0;
+    cursor:pointer;
+}
+.check:checked +ul{
+    display:flex;
+}
 }
