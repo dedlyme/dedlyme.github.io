@@ -1,0 +1,159 @@
+header {
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 4;
+    height:60px;
+
+
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+    align-items: center;
+    height:100%;
+    padding-left:0;
+
+}
+
+
+main {
+    margin-top: 100px;
+}
+
+
+li {
+    list-style: none;
+    top:0;
+    padding:0;
+    margin-top:0px;
+}
+
+
+li:hover {
+    transform: translateX(10px);
+}
+
+
+a {
+    align-items:center;
+    position:absolute;
+    text-decoration: none;
+    color:crimson;
+    font-size:25px;
+    font-family: sans-serif, Arial;
+    font-weight:bold;
+    transition: color 0.9s;
+    top:0;
+    margin-top:0px;
+    padding:0;
+}
+
+
+a:hover {
+    color: yellow;
+    transition:transform 0,5s;
+}
+
+
+.cube {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    position: relative; 
+}
+.cube:hover {
+    transform:scale(0.5);
+    transition: transform 1.5s;
+}
+
+.inner-cube {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    z-index: 4;
+}
+.inner-cube:hover {
+   
+    background-color:blue;
+         transform:rotate(45deg)scale(1.5);
+        transition: transform 0.5s;
+
+}
+
+
+.burger {
+    display: none;
+}
+
+
+.check {
+    display: none;
+}
+
+
+@media (max-width: 305px){
+    .burger {
+        display: block;
+    }
+    
+    
+
+
+    ul {
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: black;
+        margin: 0;
+        width: 100vw;
+        padding-left: 0;
+        align-items: center;
+        margin-top: 0px;
+        position:absolute;
+    }
+  
+
+
+    .check {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+
+    .check:checked + ul{
+        display: flex;
+    }
+    img{
+position:absolute;
+top:0;
+left:0;
+margin-top: 0px;
+width: 40px;
+    height: 40px;
+    top: 100%;
+    flex-direction: column;
+    margin: 0;
+    width: 100vw;
+    padding-left: 0;
+    align-items: center;
+    margin-top: 0px;
+    position:absolute;
+
+    }
+}
