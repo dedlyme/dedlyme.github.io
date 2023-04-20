@@ -4,9 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagaidu lapa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0414f9f1bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
     
+    <header>
+        <div class="navbar">
+            <div class="logo"><i class="fa-solid fa-code" style="color: #ffa500;"></i></div>
+            <ul class="links">
+                <a href="#darbi">Darbi</a>
+                <a href="/contact.html">Par mums</a>
+            </ul>
+            <a href="#" class="action_btn"></a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+                <a href="#darbi" class="togglebtn">Darbi</a>
+                <a href="/contact.html">par mani</a>
+                <a href="#" class="action_btn"></a>
+        </div>
+    </header>
+
+<main>
+    <div class="home" id="hero">
+        <div class="hero">
+            <h1>Portfolio</h1>
+            <p>Šajā mājaslapā var apskatīt <br/> ko es pašlaik esmu iemācijies par html, css un javascript</p>
+        </div>
+    </div>
+
+
+    <div class="darbi" id="darbi">
+        <div class="work">
+            <h1>Mani darbi</h1>
+        </div>
+
+        <div class="visi_darbi">
+            
+            <div class="darbs darbs-2">
+                <div>
+                    <i class="fa-solid fa-shield fa-beat fa-2xl" style="color: #4115e0; width: 100px; height: 100px;"></i>
+                    <div class="cube">
+                        <div class="inner-cube"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="darbs darbs-3">
+                <div>
+                    <i class="fa-solid fa-shield fa-beat fa-2xl" style="color: #dd1177; width: 100px; height: 100px;"></i>
+                    <h2><b><label for="textInput">Enter Text:</label>
+                        <input type="text" id="textInput"><br><br>
+                        <button onclick="addText()">Add Text</button><br><br>
+                        <div id="output"></div></b></h2>
+                </div>
+            </div>
+
+
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick =function(){
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+        function addText() {
+			var inputText = document.getElementById("textInput").value;
+			var output = document.getElementById("output");
+			output.innerHTML += inputText + "<br>";
+			document.getElementById("textInput").value = "";
+			console.log("Submitted text: " + inputText);
+		}
+
+        
+    </script>
 </body>
 </html>
