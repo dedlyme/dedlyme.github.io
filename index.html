@@ -81,8 +81,8 @@
             : 'fa-solid fa-bars'
         }
         function addText() {
-			var inputText = document.getElementById("textInput").value;
-			var output = document.getElementById("output");
+			const inputText = document.getElementById("textInput").value;
+			const output = document.getElementById("output");
 			output.innerHTML += inputText + "<br>";
 			document.getElementById("textInput").value = "";
 			console.log("Submitted text: " + inputText);
