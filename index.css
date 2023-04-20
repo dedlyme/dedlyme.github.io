@@ -193,7 +193,7 @@ header{
 .visi_darbi{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(3, 400px);
     grid-template-rows: 400px;
     gap: 50px;
 }
@@ -233,6 +233,19 @@ header{
         transition: transform 0.5s;
 
 }
+.cuube{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(219, 40, 40);
+    position:relative; 
+}
+.cuube:hover {
+
+    transform:scale(1.5);
+    transition: transform 1.5s;
+    transform: rotate(-90deg)translatex(100px);
+    
+}
 
 @media(max-width: 1400px){
     .darbi{
@@ -240,7 +253,7 @@ header{
     }
     .visi_darbi{
         grid-template-columns: repeat(1, 400px);
-        grid-template-rows: repeat(2, 400px);
+        grid-template-rows: repeat(3, 400px);
         gap: 50px;
         margin-bottom: 100px;
     }
@@ -269,7 +282,7 @@ header{
 }
 .visi_darbi{
     grid-template-columns: repeat(1, 400px);
-    grid-template-rows: repeat(2, 400px);
+    grid-template-rows: repeat(3, 400px);
     gap: 50px;
     margin-bottom: 100px;
 }
